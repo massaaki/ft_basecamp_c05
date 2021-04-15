@@ -6,7 +6,7 @@
 /*   By: mmassaak <mmassaak@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 22:37:33 by mmassaak          #+#    #+#             */
-/*   Updated: 2021/04/15 01:02:37 by mmassaak         ###   ########.fr       */
+/*   Updated: 2021/04/15 20:50:35 by mmassaak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,16 @@ int	ft_is_prime(int nb)
 
 	if (nb <= 1)
 		return (0);
-	i = 2;
+	if ((nb == 2) || (nb == 3))
+		return (1);
+	i = 3;
 	while (i <= nb / 2)
 	{
 		if (nb % i == 0)
 		{
 			return (0);
 		}
-		i++;
+		i += 2;
 	}
 	return (1);
 }
