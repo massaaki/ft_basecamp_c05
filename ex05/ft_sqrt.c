@@ -6,7 +6,7 @@
 /*   By: mmassaak <mmassaak@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 22:06:58 by mmassaak          #+#    #+#             */
-/*   Updated: 2021/04/14 17:23:00 by mmassaak         ###   ########.fr       */
+/*   Updated: 2021/04/15 14:47:41 by mmassaak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	ft_sqrt(int nb)
 	i = 1;
 	while (i * i <= nb)
 	{
+		if (i >= 47000)
+			return (0);
 		if (i * i == nb)
-		{
 			return (i);
-		}
 		i++;
 	}
 	return (0);
